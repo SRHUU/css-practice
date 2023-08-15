@@ -1,3 +1,12 @@
+/* ================================================================ */
+
+:root {
+  --text-color: #212529;
+  --space-medium: 24px;
+}
+
+/* ================================================================ */
+
 .page {
   background: #ffffff;
   padding: 0 15px;
@@ -9,7 +18,7 @@
 }
 
 .header {
-  padding: 24px;
+  padding: var(--space-medium);
 
   border-bottom: 1px solid #dee2e6;
 }
@@ -38,7 +47,9 @@
 
 .nav_link:hover {
   text-decoration: underline;
-  color: blue;
+  /* color: blue; */
+
+  opacity: 50%;
 }
 
 .nav_vertical > .nav_link {
@@ -46,7 +57,7 @@
 }
 
 .nav_inline > .nav_link:not(:last-child) {
-  margin-right: 24px;
+  margin-right: var(--space-medium);
 }
 
 .nav_vertical > .nav_link:not(:last-child) {
@@ -63,7 +74,7 @@
 }
 
 .footer {
-  padding: 24px 0;
+  padding: var(--space-medium) 0;
 
   border-top: 1px solid #dee2e6;
 }
@@ -79,7 +90,7 @@
 
 .footer_title {
   font-size: 20px;
-  color: #212529;
+  color: var(--text-color);
 
   display: block;
   margin-bottom: 12px;
@@ -87,7 +98,7 @@
 
 .hero_title {
   font-size: 56px;
-  color: #212529;
+  color: var(--text-color);
   font-weight: 500;
   margin-bottom: 12px;
   text-align: center;
@@ -95,7 +106,7 @@
 
 .hero_text {
   font-size: 20px;
-  color: #212529;
+  color: var(--text-color);
   text-align: center;
   max-width: 585px;
   margin: 0 auto;
@@ -104,23 +115,23 @@
 }
 
 .plans_card:not(:last-of-type) {
-  margin-right: 24px;
+  margin-right: var(--space-medium);
 }
 
 .card-header {
   padding: 12px;
   text-align: center;
-  font-size: 24px;
-  color: #212529;
+  font-size: var(--space-medium);
+  color: var(--text-color);
 }
 
 .card-body {
-  padding: 24px;
+  padding: var(--space-medium);
 }
 
 .card_price_amount {
   font-size: 40px;
-  color: #212529;
+  color: var(--text-color);
 }
 
 .card_price_duration {
@@ -135,12 +146,12 @@
 }
 
 .card_block:not(:last-of-type) {
-  margin-bottom: 24px;
+  margin-bottom: var(--space-medium);
 }
 
 .card_description_item {
   font-size: 16px;
-  color: #212529;
+  color: var(--text-color);
 
   display: block;
   text-align: center;
@@ -170,6 +181,8 @@
   box-shadow: 5px 5px 10px 1px rgba(33, 207, 238, 0.432);
 
   cursor: pointer;
+
+  opacity: 0.5;
 }
 
 .btn {
@@ -192,7 +205,7 @@ h1 {
   background: gray;
 
   /* max-width: 250px; */
-  width: 200px;
+  /* width: 200px; */
 
   hyphens: manual;
 
@@ -216,3 +229,127 @@ h1 {
 
   white-space: nowrap;
 }
+
+/* body {
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    #256bb7 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-image: url('/img/test.png');
+  background-repeat: round;
+} */
+
+.page {
+  /* background-image: url('/img/test2.jpeg');
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  background-attachment: fixed;
+
+  background-size: cover; */
+}
+
+.hero_text {
+  /* background-image: url('/img/test2.jpeg'); */
+
+  /* border: 20px solid transparent; */
+  padding: 40px;
+  color: #fff;
+
+  /* background-origin: border-box;
+
+  background-repeat: no-repeat; */
+
+  border-image-source: url('/img/test2.jpeg');
+  border-image-width: 20% 10%;
+  border-image-slice: 20% 10%;
+  /* border-image-repeat: space; */
+  border-image-outset: 70px;
+}
+
+/* ================================================================ */
+
+/* ================================================================ */
+/* Робота із списками та таблицями */
+/* ================================================================ */
+
+.card_block {
+  /* list-style-type: upper-alpha; */
+  list-style-position: inside;
+
+  list-style-image: linear-gradient(
+    to bottom right,
+    blue,
+    red
+  );
+
+  padding: 0;
+}
+
+.card_description_item {
+  display: list-item;
+}
+
+/* .table tr {
+  border: 1px solid #343a40;
+} */
+
+.table tr td {
+  border: 1px solid #0778e9;
+  border-bottom-color: red;
+  border-right-color: rgb(14, 230, 14);
+}
+
+.table {
+  table-layout: fixed;
+  width: 600px;
+
+  border-collapse: unset;
+
+  border-spacing: 20px 10px;
+
+  caption-side: top;
+
+  empty-cells: hide;
+}
+
+/* .nav_link::before {
+  content: open-quote;
+}
+
+.nav_link::after {
+  content: close-quote;
+} */
+
+.nav_link::before,
+.nav_link::after {
+  /* content: url('/img/test2.jpeg'); */
+
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  /* background-color: red; */
+  background-image: url('/img/test2.jpeg');
+}
+
+.nav_link::before {
+  margin-right: 15px;
+}
+
+.nav_link::after {
+  margin-left: 15px;
+}
+
+.calc {
+  width: 600px;
+
+  margin: 0;
+
+  margin-left: calc(50% - (600px / 2));
+}
+
+/* ================================================================ */

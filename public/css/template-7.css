@@ -400,14 +400,10 @@
 
   /* Гнучке позиціонування */
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .footer_copyright {
   font-size: var(--size-d);
   color: var(--color-text);
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  display: block;
 }
